@@ -9,7 +9,7 @@ for (let index = 0; index < rand; index++) {
 var idI = setInterval(function(){
   createBox();
   gameOver();
-}, 2000); 
+}, 250); 
 
 function createBox() {
     let main = document.getElementById('main');
@@ -49,15 +49,15 @@ function createBox() {
     if (group.length>2) group.forEach(b => {
         b.remove();
         });
+    // box.remove();
     //si se eliminan todas las celdas, ganas
     // Verificar si no hay más elementos en el contenedor
     if (document.querySelectorAll('.box').length === 0) {
       // Mostrar mensaje de "Has ganado"
       alert('¡Has ganado!');
   }
+  
   }
-
-
 
 
   function gameOver(){
@@ -80,6 +80,7 @@ function createBox() {
       if (pos.right + anchoTotalElemento > widthWindow) {
         alert('Game Over');
         clearInterval(idI);
+        lastElement.remove();
     }
     
     }

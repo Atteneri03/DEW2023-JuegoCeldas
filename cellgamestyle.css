@@ -5,10 +5,10 @@
   float: left;
   cursor: pointer;
 }
-
-/* div {
+/* 
+#container{
   border: 1px solid blue;
-} */
+}  */
 
 .red { background-color: red;}
 .blue { background-color: blue;}
