@@ -1,6 +1,16 @@
 
 let colours = ['red', 'blue', 'green', 'yellow'];
 
+let rand = Math.floor(Math.random() * (10 - 1) + 1);
+for (let index = 0; index < rand; index++) {
+  createBox();
+}
+
+var idI = setInterval(function(){
+  createBox();
+  gameOver();
+}, 2000); 
+
 function createBox() {
     let main = document.getElementById('main');
     let box = document.createElement('div');
@@ -99,7 +109,4 @@ function change(box){
  
 }
 
-var idI = setInterval(function(){
-  createBox();
-  gameOver();
-}, 2000); 
+
