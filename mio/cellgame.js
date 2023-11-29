@@ -73,4 +73,4 @@ function createBox() {
   var idI = setInterval(function(){
     createBox();
     gameOver();
-  }, 2000);
+  }, 2000); 
