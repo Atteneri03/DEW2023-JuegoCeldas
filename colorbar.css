@@ -1,0 +1,13 @@
+.box{
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  float: left;
+  cursor: pointer;
+}
+
+.red { background-color: red;}
+.blue { background-color: blue;}
+.green { background-color: green;}
+.yellow { background-color: yellow;}
+
