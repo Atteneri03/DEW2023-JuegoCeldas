@@ -9,7 +9,7 @@ for (let index = 0; index < rand; index++) {
 var idI = setInterval(function(){
   createBox();
   gameOver();
-}, 250); 
+}, 2000); 
 
 function createBox() {
     let main = document.getElementById('main');
@@ -29,7 +29,7 @@ function createBox() {
   box.addEventListener('click', function() {
       change(this);
   });
-    main.appendChild(box);
+    main.append(box);
     
   }
 
@@ -62,22 +62,23 @@ function createBox() {
 
   function gameOver(){
     var elements = document.querySelectorAll(".element");
-    console.log (elements);
     
     if(elements.length > 0){
       var lastElement = elements[elements.length -1];
 
-      // Obtener el ancho total del último elemento, incluyendo márgenes y bordes
+     // Obtener el ancho total del último elemento, incluyendo márgenes y bordes
       var anchoTotalElemento = lastElement.offsetWidth;
-  
+   
       // Obtener la posición del último elemento
       var pos = lastElement.getBoundingClientRect();
   
-      // Obtener el ancho de la ventana
-      var widthWindow = window.innerWidth;
+      // Obtener el ancho del div
+      var main = document.getElementById('main');
+      var posDerecho = main.getBoundingClientRect().right;
+
   
       // Si la posición del último elemento supera el ancho de la ventana, mostrar "Game Over"
-      if (pos.right + anchoTotalElemento > widthWindow) {
+      if (pos.right + anchoTotalElemento >= posDerecho) {
         alert('Game Over');
         clearInterval(idI);
         lastElement.remove();
