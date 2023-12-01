@@ -21,3 +21,12 @@
 .green { background-color: green;}
 .yellow { background-color: yellow;} 
 
+
+#button {
+  border: none;
+  padding: 10px; /*espacio alrededor texto*/
+  background-color: rgb(39, 152, 239); /*color botón*/
+  color: #ffffff; /*color texto*/
+  font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+  border-radius: 50px; /*bordes redondos*/
+}
